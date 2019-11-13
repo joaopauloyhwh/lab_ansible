@@ -1,0 +1,19 @@
+[web]
+srv01 ansible_ssh_host=10.0.0.2
+
+[db]
+srv02 ansible_ssh_host=10.0.0.3
+
+
+[servidores:children]
+web
+db
+
+#[servidores:vars]
+#ansible_ssh_port=22
+#ansible_ssh_user=operacao
+#ansible_ssh_pass=123qwe
+#ansible_become_method=sudo
+#ansible_become_user=operacao
+#ansible_become_pass=123qwe
+#ansible_connection=ssh
