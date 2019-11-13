@@ -17,5 +17,16 @@
 - name: Configurando o Timezone
   file: src=/usr/share/zoneinfo/America/Sao_Paulo dest=/etc/localtime state=link force=yes
 
+# Copia de arquivos
+- name: copiando arquivo de backup
+  copy: src=backup.tar.gz dest=/tmp
+
+- name: copiando um template
+  template: src=motd dest=/etc/motd force=yes owner=root group=root
+
+# Instalacao do Apache
+- name: instalacao do apache
+  yum: name=httpd state=latest
+  notify: Restart apache
 
 ...

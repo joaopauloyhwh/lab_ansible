@@ -1,8 +1,8 @@
 [web]
-www ansible_ssh_host=10.0.0.2
+srv01 ansible_ssh_host=10.0.0.2
 
 [db]
-mysql ansible_ssh_host=10.0.0.3
+srv02 ansible_ssh_host=10.0.0.3
 
 
 [servidores:children]

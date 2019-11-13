@@ -1,0 +1,5 @@
+---
+- name: Restart apache
+  systemd: state=restarted enabled=yes daemon_reload=yes name=httpd
+
+...

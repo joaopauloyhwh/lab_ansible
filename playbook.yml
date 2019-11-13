@@ -1,5 +1,6 @@
 - name: Default Playbook - Starting Deploy
-  hosts: db
+  hosts: all
   roles:
-    - common
+    #- common
+    - updates
    # - php
